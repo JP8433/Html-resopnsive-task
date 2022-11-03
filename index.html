@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body{
+            background-color: rgb(255, 255, 255);
+            align-items: center;
+        }
+     
+        .checked {
+            color: orange;
+        }
+
+        .required:after {
+            content: "*";
+            color: red;
+
+        }
+
+        .name {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .fullname {
+            display: flex;
+
+        }
+
+        .name input {
+            width: 200px;
+            margin-right: 10px;
+        }
+
+        .email input {
+            width: 300px;
+        }
+
+        #resize input {
+            width: 800px;
+            height: 100px;
+        }
+
+        #fulltable {
+            border: transparent;
+            width: 100%;
+        }
+
+        #fulltable td {
+            padding: 4px;
+           
+            text-align: center;
+        }
+
+        
+
+        #fulltable th {
+            padding-top: 12px;
+            padding-bottom: 12px;
+            text-align: center;
+            color: rgb(0, 0, 0);
+            padding:10px;
+        }
+        #secondtable {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        #secondtable td {
+            border: transparent #ddd;
+            padding: 4px;
+         
+            text-align: center;
+        }
+
+        #secondtable tr:nth-child(odd) {
+            background-color:transparent;
+            border: 0 px;
+            text-align: center;
+        }
+
+        #secondtable th {
+            padding-top: 12px;
+            padding-bottom: 12px;
+            text-align: center;
+            color: rgb(0, 0, 0);
+            text-align: center;
+            padding: 10px;
+        }
+        #tableborder{
+    
+            border-spacing: 0px;
+              
+        }
+        #tableborder2{
+        
+            border-collapse: collapse;
+          
+    }
+
+      
+    </style>
+</head>
+
+<body>
+
+    <form>
+        <div>
+            <div class="required"><b>Name</b></div>
+
+            <div class="fullname">
+                <div class="name">
+
+                    <input type="textbox">
+                    <label>First</label>
+                </div>
+                <div class="name">
+                    <input type="textbox">
+                    <label>Last</label>
+                </div>
+
+            </div>
+            <br>
+
+
+            <div class="email">
+                <span class="required"><label><b>Email</b><label></span><br>
+                <input type="email"><br>
+            </div>
+            <br>
+            <div class="star">
+                <span class="required" style="font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif"><b>Your
+                        Experience</b></label></span><br>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <br><br>
+
+                <label style="font-family:Georgia, 'Times New Roman', Times, serif">Overall how would you like to rate
+                    us?</label>
+            </div><br>
+
+            <span class="required"><b>How satisfied are you with</b></span>
+            <div class="radiotable">
+                <br>
+                <div class="radiotable" id="fulltable">
+                    <table id="tableborder" style="border: 1px solid transparent">
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th style="font-family:Georgia, 'Times New Roman', Times, serif">Very Unsatisfied</th>
+                                <th style="font-family:Georgia, 'Times New Roman', Times, serif">Unsatisfied</th>
+                                <th style="font-family:Georgia, 'Times New Roman', Times, serif">Nuteral</th>
+                                <th style="font-family:Georgia, 'Times New Roman', Times, serif">Satisfied</th>
+                                <th style="font-family:Georgia, 'Times New Roman', Times, serif">Very satisfied</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr bgcolor="grey">
+                                <td style="font-family:Georgia, 'Times New Roman', Times, serif">Purchase</td>
+                                <td bgcolor="grey">
+                                    <input type="radio" name="purchase" id="purchase">
+                                </td>
+                                <td bgcolor="grey">
+                                    <input type="radio" name="purchase" id="purchase">
+                                </td>
+                                <td bgcolor="grey">
+                                    <input type="radio" name="purchase" id="purchase">
+                                </td>
+                                <td bgcolor="grey">
+                                    <input type="radio" name="purchase" id="purchase">
+                                </td>
+                                <td bgcolor="grey">
+                                    <input type="radio" name="purchase" id="purchase">
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <td style="font-family:Georgia, 'Times New Roman', Times, serif">Service</td>
+                                <td>
+                                    <input type="radio" name="service" id="service">
+                                </td>
+                                <td>
+                                    <input type="radio" name="service" id="service">
+                                </td>
+                                <td>
+                                    <input type="radio" name="service" id="service">
+                                </td>
+                                <td>
+                                    <input type="radio" name="service" id="service">
+                                </td>
+                                <td>
+                                    <input type="radio" name="service" id="service">
+                                </td>
+                            </tr>
+                            <tr bgcolor="grey">
+                                <td style="font-family:Georgia, 'Times New Roman', Times, serif">Company Overall</td>
+                                <td>
+                                    <input type="radio" name="company overall" id="company overall">
+                                </td>
+                                <td>
+                                    <input type="radio" name="company overall" id="company overall">
+                                </td>
+                                <td>
+                                    <input type="radio" name="company overall" id="company overall">
+                                </td>
+                                <td>
+                                    <input type="radio" name="company overall" id="company overall">
+                                </td>
+                                <td>
+                                    <input type="radio" name="company overall" id="company overall">
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div><br>
+                <span class="required"><label><B>How likely are you to</B></label></span>
+                <div class="secondtable" id="secondtable">
+                    <table id="tableborder2">
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th style="font-family:Georgia, 'Times New Roman', Times, serif">Very Unlikely</th>
+                                <th style="font-family:Georgia, 'Times New Roman', Times, serif">Unlikely</th>
+                                <th style="font-family:Georgia, 'Times New Roman', Times, serif">Nuteral</th>
+                                <th style="font-family:Georgia, 'Times New Roman', Times, serif">Likely</th>
+                                <th style="font-family:Georgia, 'Times New Roman', Times, serif">Very Likely</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td bgcolor="grey" style="font-family:Georgia, 'Times New Roman', Times, serif">Buy from us again</td>
+                                <td bgcolor="grey">
+                                    <input type="radio" name="again" id="again">
+                                </td>
+                                <td bgcolor="grey">
+                                    <input type="radio" name="again" id="again">
+                                </td>
+                                <td bgcolor="grey">
+                                    <input type="radio" name="again" id="again">
+                                </td>
+                                <td bgcolor="grey">
+                                    <input type="radio" name="again" id="again">
+                                </td>
+                                <td bgcolor="grey">
+                                    <input type="radio" name="again" id="again">
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <td style="font-family:Georgia, 'Times New Roman', Times, serif">Recommend our products
+                                    to others</td>
+                                <td>
+                                    <input type="radio" name="recomend" id="recomend">
+                                </td>
+                                <td>
+                                    <input type="radio" name="recomend" id="recomend">
+                                </td>
+                                <td>
+                                    <input type="radio" name="recomend" id="recomend">
+                                </td>
+                                <td>
+                                    <input type="radio" name="recomend" id="recomend">
+                                </td>
+                                <td>
+                                    <input type="radio" name="recomend" id="recomend">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td bgcolor="grey" style="font-family:Georgia, 'Times New Roman', Times, serif">Recomend our company to
+                                    other</td>
+                                <td bgcolor="grey">
+                                    <input type="radio" name="recomend comapny" id="recomend company">
+                                </td>
+                                <td bgcolor="grey">
+                                    <input type="radio" name="recomend comapny" id="recomend company">
+                                </td>
+                                <td bgcolor="grey">
+                                    <input type="radio" name="recomend comapny" id="recomend company">
+                                </td>
+                                <td bgcolor="grey">
+                                    <input type="radio" name="recomend comapny" id="recomend company">
+                                </td>
+                                <td bgcolor="grey">
+                                    <input type="radio" name="recomend comapny" id="recomend company">
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    </table>
+                </div><br>
+
+                <div class="lasttextbox">
+                    <div id="resize">
+                        <b><label>Addiotional comments or suggestions</label></b><br>
+                       <textarea  rows="5" cols="100" id="additionaltext"></textarea>
+                    </div>
+                    <button>Submit</button>
+                </div>
+
+
+            </div>
+    </form>
+    </div>
+
+</body>
+
+</html>
